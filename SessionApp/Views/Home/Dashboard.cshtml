@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold mb-4">Welcome, @ViewBag.User!</h2>
+        <p class="text-lg mb-6">You are now logged in. This is your dashboard.</p>
+
+        <div class="space-x-4">
+            @Html.ActionLink("Check Session", "CheckSession", null, new { @class = "text-blue-500 hover:underline" })
+            <a href="@Url.Action("Login", "Account")" class="text-blue-500 hover:underline">Logout</a>
+        </div>
+
+    </div>
+</body>
+</html>
